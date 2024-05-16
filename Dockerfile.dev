@@ -5,7 +5,4 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
-COPY --chown=app:app . /app
-
-
-CMD ["npm", "start"]
+COPY . .

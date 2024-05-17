@@ -10,4 +10,5 @@ RUN npm run build
 # The nginx container will serve the static files from this folder
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html

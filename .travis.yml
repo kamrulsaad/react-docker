@@ -6,4 +6,11 @@ before_install:
   - docker build -f Dockerfile.dev -t kamrulsaad/react-docker .
 
 script:
-  - docker run kamrulsaad/react-docker npm run test -- --coverage
+  - docker run kamrulsaad/react-docker /bin/sh -c "npm run test -- --coverage"
+
+# deploy:
+#   provider: elasticbeanstalk
+#   region: "us-east-1"
+#   app: "docker"
+
+  # http://docker-env-1.eba-iy4fcke4.us-east-1.elasticbeanstalk.com/
